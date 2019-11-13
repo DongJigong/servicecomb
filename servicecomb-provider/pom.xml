@@ -4,26 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>servicecomb-springboot2</groupId>
     <artifactId>servicecomb-provider</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.servicecomb</groupId>
-                <artifactId>java-chassis-dependencies</artifactId>
-                <version>1.2.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <parent>
+        <groupId>servicecomb</groupId>
+        <artifactId>servicecomb-springboot</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <dependencies>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.servicecomb</groupId>-->
+<!--            <artifactId>spring-boot-starter-servicecomb</artifactId>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>spring-boot2-starter</artifactId>
         </dependency>
         <!--spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
         <dependency>
@@ -41,14 +38,34 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+
+        <!--如果想要使用eureka作为注册中心需要添加下面依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>spring-boot-starter-discovery</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>config-apollo</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId></groupId>
-            <artifactId>servicecomb-p</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
