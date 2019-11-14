@@ -13,20 +13,25 @@
     </parent>
     <dependencies>
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.servicecomb</groupId>-->
-<!--            <artifactId>spring-boot-starter-servicecomb</artifactId>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>spring-boot2-starter</artifactId>
+            <artifactId>spring-boot-starter-servicecomb</artifactId>
         </dependency>
-        <!--spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
+
 <!--        <dependency>-->
 <!--            <groupId>org.apache.servicecomb</groupId>-->
-<!--            <artifactId>spring-boot-starter-provider</artifactId>-->
+<!--            <artifactId>spring-boot2-starter</artifactId>-->
 <!--        </dependency>-->
+<!--        spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>spring-boot-starter-provider</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -50,21 +55,15 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
-        <!--如果想要使用eureka作为注册中心需要添加下面依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>spring-boot-starter-discovery</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.servicecomb</groupId>-->
-<!--            <artifactId>config-apollo</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>config-apollo</artifactId>
+        </dependency>
 
     </dependencies>
 

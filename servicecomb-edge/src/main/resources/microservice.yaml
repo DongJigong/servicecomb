@@ -17,8 +17,9 @@
 
 APPLICATION_ID: discoverytest
 service_description:
+  environment: development
   name: edge
-  version: 0.0.1
+  version: 0.0.3
 servicecomb:
   service:
     registry:

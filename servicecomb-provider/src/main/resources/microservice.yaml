@@ -17,6 +17,7 @@
 
 APPLICATION_ID: discoverytest
 service_description:
+  environment: development
   name: discoveryServer
   version: 0.0.3
 servicecomb:

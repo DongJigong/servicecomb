@@ -17,22 +17,15 @@
         <omega.version>0.4.0</omega.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.servicecomb</groupId>
-                <artifactId>java-chassis-dependencies</artifactId>
-                <version>1.2.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.servicecomb</groupId>-->
+<!--            <artifactId>spring-boot2-starter</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
         <!--spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
@@ -60,16 +53,17 @@
             <!--<scope>test</scope>-->
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.servicecomb.pack</groupId>
-            <artifactId>omega-spring-starter</artifactId>
-            <version>${omega.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.servicecomb.pack</groupId>
-            <artifactId>omega-transport-resttemplate</artifactId>
-            <version>${omega.version}</version>
-        </dependency>
+        <!--如果使用分布式事务启用下面的jar-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.servicecomb.pack</groupId>-->
+<!--            <artifactId>omega-spring-starter</artifactId>-->
+<!--            <version>${omega.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.servicecomb.pack</groupId>-->
+<!--            <artifactId>omega-transport-resttemplate</artifactId>-->
+<!--            <version>${omega.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
         <!--<dependency>-->

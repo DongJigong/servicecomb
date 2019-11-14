@@ -17,6 +17,7 @@
 
 APPLICATION_ID: discoverytest
 service_description:
+  environment: development
   name: discoveryClient
   version: 0.0.2
 servicecomb:

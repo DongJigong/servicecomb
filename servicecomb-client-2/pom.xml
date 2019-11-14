@@ -49,31 +49,17 @@
             <!--<scope>test</scope>-->
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.servicecomb.pack</groupId>
-            <artifactId>omega-spring-starter</artifactId>
-            <version>${omega.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.servicecomb.pack</groupId>
-            <artifactId>omega-transport-resttemplate</artifactId>
-            <version>${omega.version}</version>
-        </dependency>
+        <!--如果使用分布式事务启用下面的jar-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.servicecomb.pack</groupId>-->
+        <!--            <artifactId>omega-spring-starter</artifactId>-->
+        <!--            <version>${omega.version}</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.servicecomb.pack</groupId>-->
+        <!--            <artifactId>omega-transport-resttemplate</artifactId>-->
+        <!--            <version>${omega.version}</version>-->
+        <!--        </dependency>-->
     </dependencies>
-
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-aop</artifactId>-->
-            <!--<version>4.3.20.RELEASE</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>junit</groupId>-->
-            <!--<artifactId>junit</artifactId>-->
-            <!--<version>4.12</version>-->
-        <!--</dependency>-->
-
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.assertj/assertj-core &ndash;&gt;-->
-
 
 </project>
