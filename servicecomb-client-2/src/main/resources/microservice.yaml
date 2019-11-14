@@ -32,3 +32,7 @@ servicecomb:
   references:
     discoveryServer:
       version-rule: 0.0.3
+  hanlder:
+    chain:
+      Consumer:
+        default: auth-consumer

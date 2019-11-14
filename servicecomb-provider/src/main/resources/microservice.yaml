@@ -32,5 +32,5 @@ servicecomb:
   handler:
     chain:
       Provider:
-        default: bizkeeper-provider
+        default: auth-provider
 servicecomb.rest.servlet.urlPattern: /*

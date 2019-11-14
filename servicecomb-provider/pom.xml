@@ -32,6 +32,19 @@
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>spring-boot-starter-provider</artifactId>
         </dependency>
+
+        <!--启用RSA认证-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-publickey-auth</artifactId>
+        </dependency>
+
+        <!--调用链追踪-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>tracing-zipkin</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
