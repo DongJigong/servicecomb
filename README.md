@@ -1,2 +1,2 @@
 # servicecomb
-springboot + servicecomb + servicecomb-pack
+springboot + servicecomb
