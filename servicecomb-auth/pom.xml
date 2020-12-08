@@ -15,40 +15,76 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>java-chassis-spring-boot-starter-standalone</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>spring-boot-starter-servicecomb</artifactId>
+            <artifactId>transport-rest-vertx</artifactId>
         </dependency>
 
-        <!--spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
+        <!--启用RSA认证-->
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>spring-boot-starter-provider</artifactId>
+            <artifactId>handler-publickey-auth</artifactId>
+        </dependency>
+
+        <!--调用链追踪-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-tracing-zipkin</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-bizkeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-loadbalance</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>config-apollo</artifactId>
+            <artifactId>foundation-common</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>config-nacos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>tracing-zipkin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -19,29 +19,21 @@
 
     <dependencies>
 
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.apache.servicecomb</groupId>-->
-            <!--<artifactId>spring-boot-starter-discovery</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.apache.servicecomb</groupId>-->
-            <!--<artifactId>spring-boot-starter-servicecomb</artifactId>-->
-        <!--</dependency>-->
         <!-- https://mvnrepository.com/artifact/org.apache.servicecomb/edge-core -->
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>edge-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>java-chassis-spring-boot-starter-standalone</artifactId>
+        </dependency>
+
 
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
+            <version>6.1.6.Final</version>
         </dependency>
 
         <dependency>
@@ -53,16 +45,17 @@
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>provider-pojo</artifactId>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.apache.servicecomb/swagger-generator-core -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>swagger-generator-core</artifactId>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.apache.servicecomb</groupId>-->
-            <!--<artifactId>spring-boot-starter-discovery</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

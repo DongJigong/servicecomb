@@ -20,17 +20,18 @@ package com.changqin.edge.authentication.encrypt;
 import org.apache.servicecomb.provider.rest.common.RestSchema;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestSchema(schemaId = "encrypt")
 @RequestMapping(path = "auth/v1")
 public class EncryptImpl {
   @GetMapping(path = "/queryUserId")
-  public String queryUserId(String serviceToken) {
+  public String queryUserId(@RequestParam("token") String serviceToken) {
     return serviceToken + "-userId";
   }
 
   @GetMapping(path = "/queryHcr")
-  public Hcr queryHcr(String hcrId) {
+  public Hcr queryHcr(@RequestParam("hcrId") String hcrId) {
     Hcr hcr = new Hcr();
     hcr.setBodyKey("bodyKey-" + hcrId + "-");
     hcr.setSignatureKey("signatureKey-" + hcrId + "-");

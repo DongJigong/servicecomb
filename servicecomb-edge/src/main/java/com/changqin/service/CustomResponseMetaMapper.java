@@ -20,17 +20,18 @@ package com.changqin.service;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.servicecomb.swagger.invocation.response.ResponseMeta;
+import com.fasterxml.jackson.databind.JavaType;
+import org.apache.servicecomb.swagger.invocation.response.ResponsesMeta;
 import org.apache.servicecomb.swagger.invocation.response.ResponseMetaMapper;
 
 import com.fasterxml.jackson.databind.type.SimpleType;
 
 public class CustomResponseMetaMapper implements ResponseMetaMapper {
-  private final static Map<Integer, ResponseMeta> CODES = new HashMap<>(1);
-
+  private final static Map<Integer, ResponsesMeta> CODES = new HashMap<>(1);
+  ResponsesMeta meta = new ResponsesMeta();
   static {
-    ResponseMeta meta = new ResponseMeta();
-    meta.setJavaType(SimpleType.constructUnsafe(IllegalStateErrorData.class));
+    ResponsesMeta meta = new ResponsesMeta();
+    meta.setResponseType(500,SimpleType.constructUnsafe(IllegalStateErrorData.class));
     CODES.put(500, meta);
   }
 
@@ -40,7 +41,7 @@ public class CustomResponseMetaMapper implements ResponseMetaMapper {
   }
 
   @Override
-  public Map<Integer, ResponseMeta> getMapper() {
-    return CODES;
+  public Map<Integer, JavaType> getMapper() {
+    return meta.getResponseMap();
   }
 }

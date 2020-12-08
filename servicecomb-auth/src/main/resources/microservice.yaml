@@ -26,6 +26,6 @@ servicecomb:
   rest:
     address: 127.0.0.1:8889
     server:
-      verticle-count: 10
+      verticle-count: 4
   highway:
     address: 0.0.0.0:7070

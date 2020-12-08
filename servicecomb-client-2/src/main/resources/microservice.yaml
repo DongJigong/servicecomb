@@ -35,4 +35,4 @@ servicecomb:
   hanlder:
     chain:
       Consumer:
-        default: auth-consumer
+        default: auth

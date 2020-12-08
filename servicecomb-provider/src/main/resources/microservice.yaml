@@ -14,23 +14,32 @@
 ## See the License for the specific language governing permissions and
 ## limitations under the License.
 ## ---------------------------------------------------------------------------
-
 APPLICATION_ID: discoverytest
 service_description:
   environment: development
   name: discoveryServer
-  version: 0.0.3
+  version: 0.0.3.0
 servicecomb:
   service:
     registry:
       address: http://127.0.0.1:30100
   rest:
-    address: 0.0.0.0:8080
+    address: 0.0.0.0:8085
+    server:
+      verticle-count: 8
   #add highway for test filter
   highway:
     address: 0.0.0.0:7071
   handler:
     chain:
+      Consumer:
+        default: qps-flowcontrol-consumer,loadbalance
       Provider:
-        default: auth-provider
-servicecomb.rest.servlet.urlPattern: /*
+        default: qps-flowcontrol-provider
+  tracing:
+    collector:
+      address: http://localhost:9411
+  nacos:
+    serverUri: http://127.0.0.1:8848
+    group: DEFAULT_GROUP
+    dataId: provider

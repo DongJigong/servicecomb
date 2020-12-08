@@ -18,52 +18,63 @@
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.servicecomb</groupId>-->
-<!--            <artifactId>spring-boot2-starter</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
-        <!--spring-boot-starter-provider had included transport-rest-vertx and transport-highway-->
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>spring-boot-starter-provider</artifactId>
+            <artifactId>java-chassis-spring-boot-starter-standalone</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
-            <artifactId>spring-boot-starter-discovery</artifactId>
+            <artifactId>transport-rest-vertx</artifactId>
+        </dependency>
+
+        <!--启用RSA认证-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-publickey-auth</artifactId>
+        </dependency>
+
+        <!--调用链追踪-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-tracing-zipkin</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-bizkeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-loadbalance</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-            <!--<version>1.5.9.RELEASE</version>-->
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.8.0</version>
-            <!--<scope>test</scope>-->
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
         </dependency>
 
-        <!--如果使用分布式事务启用下面的jar-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.servicecomb.pack</groupId>-->
-<!--            <artifactId>omega-spring-starter</artifactId>-->
-<!--            <version>${omega.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.servicecomb.pack</groupId>-->
-<!--            <artifactId>omega-transport-resttemplate</artifactId>-->
-<!--            <version>${omega.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>foundation-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>config-nacos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>tracing-zipkin</artifactId>
+        </dependency>
+
     </dependencies>
 
         <!--<dependency>-->
