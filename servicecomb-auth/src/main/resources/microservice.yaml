@@ -17,8 +17,9 @@
 
 APPLICATION_ID: discoverytest
 service_description:
+  environment: development
   name: auth
-  version: 0.0.1
+  version: 1.0.0.0
 servicecomb:
   service:
     registry:

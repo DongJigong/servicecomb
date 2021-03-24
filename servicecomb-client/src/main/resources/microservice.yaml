@@ -19,7 +19,7 @@ APPLICATION_ID: discoverytest
 service_description:
   environment: development
   name: discoveryClient
-  version: 0.0.2
+  version: 2.0.0.0
 servicecomb:
   service:
     registry:
@@ -31,4 +31,4 @@ servicecomb:
     address: 0.0.0.0:7070
   references:
     discoveryServer:
-      version-rule: 0.0.3.0
+      version-rule: 3.0.0.0

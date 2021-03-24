@@ -17,8 +17,10 @@
 
 package com.changqin.service.handler;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.concurrent.CompletableFuture;
 
 public interface Auth {
-  CompletableFuture<Boolean> auth(String info);
+  CompletableFuture<Boolean> auth(@RequestParam("info") String info);
 }

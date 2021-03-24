@@ -18,7 +18,7 @@ APPLICATION_ID: discoverytest
 service_description:
   environment: development
   name: discoveryServer
-  version: 0.0.3.0
+  version: 3.0.0.0
 servicecomb:
   service:
     registry:
@@ -40,6 +40,9 @@ servicecomb:
     collector:
       address: http://localhost:9411
   nacos:
-    serverUri: http://127.0.0.1:8848
+    serverAddr: http://127.0.0.1:8848
     group: DEFAULT_GROUP
     dataId: provider
+    namespace: public
+    contentType: yaml
+    addPrefix: false

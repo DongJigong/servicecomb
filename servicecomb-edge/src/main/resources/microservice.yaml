@@ -19,7 +19,7 @@ APPLICATION_ID: discoverytest
 service_description:
   environment: development
   name: edge
-  version: 0.0.3
+  version: 3.0.0.0
 servicecomb:
   service:
     registry:
@@ -36,6 +36,13 @@ servicecomb:
         default: auth,loadbalance
         service:
           auth: loadbalance
+  uploads:
+    directory: tmp_for_upload_gateway
+
+  config:
+    client:
+      serverUri: http://localhost:30113
+      refreshMode: 1
   http:
     dispatcher:
       edge:
@@ -51,7 +58,8 @@ servicecomb:
               prefixSegmentCount: 3
               path: "/url/discoveryServer/v3/.*"
               microserviceName: discoveryServer
-              versionRule: 0.0.1-0.0.4
+              versionRule: 1.0.1-4.0.4
+
 #            businessV2:
 #              prefixSegmentCount: 1
 #              path: "/url/business/v2/.*"
